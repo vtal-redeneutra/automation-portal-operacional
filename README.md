@@ -20,6 +20,7 @@ cd automation-portal-operacional.git
 npm install
 ```
 5 - Passo de execução dos testes
+```
 5.1 - Para iniciar os testes, execute um dos seguintes comandos no terminal do VS Code:
 
 ```

@@ -1,13 +1,17 @@
-Feature: Validar site Vtal
+Feature: Validar menu site Vtal
 
-    Background: Acessar site Vtal
-        Given acessar site Vtal
+    Background: Acessar site da Vtal
+        Given acessar site vtal
 
-    @testearriel @testeregressivo
-    Scenario: Validar menu do site da Vtal
-        Then devo visualizar as informacoes do site
-        And clico no botao quem somos
-        And clico no botao produtos
-        And clico no botao imprensa
-        And clico no botao developers
-        Then devera ser apresentado tela dos menus clicados
+    @validarhome @regressivo
+    Scenario: Validar acesso site Vtal
+        When acesso a pagina de login
+        Then devo visualizar barra de menu superior
+
+    @validarmenu @regressivo
+    Scenario Outline: Validar acionamento do botao quem somos
+        Given acessar site vtal
+        And aciono botao quem somos
+        And aciono botao produtos
+        And aciono botao impressa
+        Then devera ser possivel visualizar as paginas de cada menu
