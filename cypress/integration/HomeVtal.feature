@@ -1,17 +1,12 @@
-Feature: Validar menu site Vtal
+Feature: Validar menu portal operacional 
 
-    Background: Acessar site da Vtal
-        Given acessar site vtal
+    Background: Acessar portal operacional
+        Given que tenho usuario no portal
 
     @validarhome @regressivo
-    Scenario: Validar acesso site Vtal
-        When acesso a pagina de login
-        Then devo visualizar barra de menu superior
-
-    @validarmenu @regressivo
-    Scenario Outline: Validar acionamento do botao quem somos
-        Given acessar site vtal
-        And aciono botao quem somos
-        And aciono botao produtos
-        And aciono botao impressa
-        Then devera ser possivel visualizar as paginas de cada menu
+    Scenario: Validar acesso portal operacional
+        When devera ser apresentado mensagem de boas vindas
+        And acionar botao home
+        And acionar botao dashboard
+        And acionar botao analytics
+        Then devera ser apresetado os resultados das telas
