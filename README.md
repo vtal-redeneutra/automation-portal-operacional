@@ -9,7 +9,7 @@ Escolher uma IDE de JavaScript para programar
 ```
 2- Passo de um clone no projeto
 ```
-git clone git@github.com:vtalarrielrodrigo/automation-portal-operacional.git
+git clone git@github.com:vtal-redeneutra/automation-portal-operacional.git
 ```
 3- Passo de entrar na pasta do projeto
 ```
