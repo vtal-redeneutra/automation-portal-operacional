@@ -1,7 +1,7 @@
 /* global Given, Then, When */
 
-import HomePage from '../pageobjects/HomePage'
-import LoginPage from '../pageobjects/LoginPage'
+import HomePage from '../pageActions/HomePage'
+import LoginPage from '../pageActions/LoginPage'
 const loginPage = new LoginPage
 const homePage = new HomePage
 
