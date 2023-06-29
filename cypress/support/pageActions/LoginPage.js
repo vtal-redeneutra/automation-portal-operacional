@@ -9,20 +9,10 @@ class LoginPage {
     acessarSite() {
         cy.visit(url)
     }
-
-    // Clica no botão que acessa a página de login do site
-    clicarBotaoPaginaLogin() {
-        cy.get(loginElements.botaoLogin()).click()
-    }
-
-    // Clica no botão de realizar login
-    clicarBotaoRealizarLogin() {
-        cy.get(loginElements.botaoRealizarLogin()).click()
-    }
-
+    
     // Informa email no input do email
     informarEmail(email) {
-        cy.get(loginElements.inputEmail()).type(email)
+        cy.get(loginElements.inputUsuario()).type(email)
     }
 
     // Informa senha no input da senha
@@ -30,14 +20,14 @@ class LoginPage {
         cy.get(loginElements.inputSenha()).type(senha)
     }
 
-    // Verifica se o botão tem o texto "Esqueceu sua senha?"
-    visualizarBotaoRecuperarSenha() {
-        cy.get(loginElements.botaoRecuperarSenha()).should('contain', 'Esqueceu sua senha?')
+    // Clica no botão btn Entrar da tela de login
+    clicarBotaoEntrar() {
+        cy.get(loginElements.btnEntrar()).click()
     }
 
     // Visualizar mensagem de erro "Usuário ou senha inválidos."
-    visualizarErroLogin() {
-        cy.get(loginElements.mensagemErro()).should('contain', 'Usuário ou senha inválidos.')
+    visualizarSucessoLogin() {
+        cy.get(loginElements.mensagemSucessoHome()).should('contain', 'Bem vindo ao Portal de Serviços das Tenants!')
     }
     
 }

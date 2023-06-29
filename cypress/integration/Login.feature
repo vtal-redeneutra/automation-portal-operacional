@@ -1,16 +1,16 @@
-Feature: Validar portal operacional 
+Feature: Login portal operacional
 
     Background: Acessar portal operacional
-        Given que tenho usuario no portal
+        Given acessar portal operacional
 
-    @validarlogin @regressivo
-    Scenario: Validar acesso portal operacional
-        When acesso pagina de login
-        And preencho campo de usuario <EMAIL>
-        And preencho campo senha <SENHA>
-        And aciono botao entrar
-        Then devera ser apresentado mensagem de boas vindas
+    @testelogin @testeregressivo
+    Scenario: Visualizar tela de login
+        When acesso a pagina de login
+        Then devo visualizar botao campos de usuario <email>
+        And senha <senha>
+        When clico no botao entrar
+        Then devo visualizar mensagem de sucesso
 
         Examples:
-        |           EMAIL         |    SENHA     |          MENSAGEM               |
-        | rodrigo.arriel@vtal.com | @#$%Roo28051 | Bem vindo ao Portal de Serviços |
+            | email                        |   senha      |
+            | rodrigo.arriel@vtal.com      | @#$%Roo28051 |
